@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color:  #FAFAFB;;
+}
+
+// file upload
+.container{
+    width: 100%;
+    min-height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+flex-direction: column;
+}
+
+.Drop-card{
+    width: 25vw;
+    min-height: 30vh;
+    padding: 20px ;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px 0px #0000001A;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+
+h4{
+font-family: Poppins;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: 27px;
+letter-spacing: -0.035em;
+text-align:center;
+color: #4F4F4F;
+margin: 0;
+}
+p{
+    font-size: 14px;
+    opacity: .7;
+    color: #4F4F4F;
+margin: 20px auto;
+text-align: center;
+
+}
+
+
+.image-card{
+    background: #F6F8FB;
+width: 80%;
+margin: 0 auto;
+min-height: 30vh;
+border: 1px dashed #97BEF4;
+border-radius: 12px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-direction: column;
+padding: 20px;
+p{
+    opacity: .5;
+    font-size: 12px;
+}
+img{
+    max-width: 150px;
+}
+transition: .5s ease;
+
+&:hover{
+    border: 2px dashed #97BEF4;
+    transform: scale(1.1,1.1);
+}
+}
+
+
+
+label{
+    width: max-content;
+  display: block;
+  box-sizing: border-box;
+  background: #2F80ED;
+border-radius: 8px;
+padding: 10px 20px !important;
+  color: white;
+  &:hover{
+      transition: .5s ease  ;
+    background:darken($color:  #2F80ED, $amount: 10);
+}
+ 
+font-size: 12px;
+font-style: normal;
+font-weight: 500;
+line-height: 16px;
+text-align: center;
+
+  cursor: pointer;
+  margin: 0rem auto;
+}
+
+
+}
+
+.hide-on-load{
+    width: 100%;
+
+}
+
+.progress-container{
+    width: 100%;
+h4{
+    font-family: Poppins;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: 27px;
+letter-spacing: -0.035em;
+text-align: left;
+}
+
+.progress-bar{
+    width: 100%;
+    height: 8px;
+    margin-top: 2rem;
+    background-color: #F2F2F2;
+    border-radius: 8px;
+    overflow: hidden !important;
+    .bar{
+        position: relative;
+        width: 20%;
+        height: 8px;
+        border-radius: 8px;
+        background-color: #2F80ED;
+        animation: progress-animation .5s infinite ease-in-out;
+    }
+}
+}
+
+@keyframes progress-animation {
+    0% {transform:translateX(0%) ;}
+    25% {transform:translateX(100%) ;}
+    50% {transform:translateX(200%) ;}
+    75% {transform:translateX(300%) ;}
+    100% {transform:translateX(400%) ;}
+}
+.i-card{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h1{
+        text-align: center;
+        color: #219653;
+    }
+    img{
+        max-width: 100%;
+        width: 100%;
+        max-height: 40vh;
+        object-fit: cover;
+        object-position: top;
+        border-radius: 12px;
+    }
+    h4{
+        margin: 0.5em auto;
+        text-align: center;
+        font-family: Poppins;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: 27px;
+letter-spacing: -0.035em;
+text-align: center;
+
+    }
+    .link{
+        width: 100%;
+        display: grid;
+        border-radius: 8px;
+        overflow: hidden;
+        background-color: #F6F8FB;
+        grid-template-columns: 7fr 5fr;
+        grid-auto-rows: 5vh;
+        margin-top: 1rem;
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        button{
+            width: 100%;
+            padding:  10px;
+            border-radius: 8px;
+            font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 16px;
+letter-spacing: -0.035em;
+text-align: center;
+border: none;
+color: white;
+            background-color: #2F80ED;
+        }
+        p{
+            font-family: Poppins;
+font-size: 12px;
+font-style: normal;
+font-weight: 500;
+line-height: 12px;
+letter-spacing: -0.035em;
+text-align: center;
+text-overflow: ellipsis;
+        }
+    }
+}
+
+@media screen and (max-width:600px) {
+    .Drop-card{
+        width: 80% !important;
+        .image-card{
+            min-height: 20vh;
+        }
+    }
+}
